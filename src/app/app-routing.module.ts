@@ -11,7 +11,8 @@ const appRoutes: Routes = [
   { path: 'cars', component: CarsPageComponent, children: [
     {path: ':id/:name', component: CarPageComponent}
   ] },
-  { path: '**', component: NotFoundComponent}
+  { path: 'not-found', component: NotFoundComponent},
+  { path: '**', redirectTo: '/not-found'},
 ];
 
 @NgModule({
